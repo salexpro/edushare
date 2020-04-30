@@ -1,0 +1,43 @@
+-
+    const platform = [
+        {
+            icon: 'card',
+            title: 'Blockchain based DID'
+        },
+        {
+            icon: 'school',
+            title: 'Blockchain based student record system'
+        },
+        {
+            icon: 'users',
+            title: 'Smart contracts to faciliate attendance and credits'
+        },
+        {
+            icon: 'network',
+        },
+        {
+            icon: 'diploma',
+            title: 'Using blockchain, issue immutable certificates'
+        },
+        {
+            icon: 'businessman',
+            title: 'Companies can verify potential employee’s records'
+        },
+    ]
+
+section#platform.platform
+    .grid-container
+        h2.text-center
+            | Platform Structure
+        p.lead.text-center
+            | Example of how EduShare’s blockchain can be used in a private manner by educational institutions. We plan to operate this service in form of a Baas. Within our ecosystem, this will be named “EPaaS”. (Educational Platform as a Service)
+        .platform_content
+            ul.platform_structure
+                each item in platform
+                    li(class=item.title ? 'platform_item' : 'platform_item_network')
+                        +icon(item.icon, [64, 64])
+                        if item.title
+                            p.platform_item_title
+                                =item.title
+            .platform_image
+                img(srcset="./assets/img/structure.png 1x, ./assets/img/structure@2x.png 2x" src="./assets/img/structure.png" alt="Online Courses")

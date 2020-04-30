@@ -1,0 +1,45 @@
+-
+    const about = [
+        {
+            title: 'EduShare',
+            descr: 'Content DAPP'
+        },
+        {
+            title: 'EduFund',
+            descr: 'Student Crowdfunding'
+        },
+        {
+            title: 'EduInsure',
+            descr: 'Student Insurance'
+        },
+        {
+            title: 'EpaaS',
+            descr: 'Blockchain Platform'
+        },
+        {
+            title: 'EduAsk',
+            descr: 'Blockchain Q&A'
+        },
+        {
+            title: 'EduLend',
+            descr: 'Student Lending'
+        },
+    ]
+
+section#about.about
+    .grid-container
+        h2.text-center
+            | EduShare Platform
+        p.lead.text-center
+            | EduShare is a blockchain project for the educational industry. While not all industries can implement blockchain, technological improvements can revolutionize the educational industry.
+
+        ul.about_platform
+            each item, i in about
+                li.about_item(class=`about_item--${i+1}`)
+                    h3
+                        =item.title
+                    p.about_item_descr
+                        =item.descr
+                if i == 2
+                    h3.about_hex
+                        | EduShare

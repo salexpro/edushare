@@ -1,0 +1,28 @@
+.promo{
+    position: relative;
+    &_container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &_content{
+        max-width: 460px;
+    }
+    &_buttons{
+        margin-top: 73px;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        left: -96px;
+        bottom: -80px;
+        width: 287px;
+        height: 288px;
+        background-image: url(../assets/img/bubble.png);
+        background-size: cover;
+        z-index: -1;
+        @include breakpoint(retina){
+            background-image: url(../assets/img/bubble@2x.png);
+        }
+    }
+}

@@ -1,3 +1,19 @@
 .footer{
     margin-top: auto;
+    padding-bottom: 40px;
+    &_top{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+    }
+    &_bottom{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &_copyright{
+        font-size: 16px;
+        color: $gray60;
+    }
 }

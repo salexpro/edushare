@@ -1,3 +1,23 @@
 .header{
-    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+    &::after{
+        content: '';
+        position: absolute;
+        top: -120px;
+        left: 283px;
+        width: 235px;
+        height: 235px;
+        background-image: url(../assets/img/bubble_small.png);
+        background-size: cover;
+        transform: rotate(45deg);
+        z-index: -1;
+        @include breakpoint(retina){
+            background-image: url(../assets/img/bubble_small@2x.png);
+        }
+    }
 }

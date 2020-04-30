@@ -1,5 +1,7 @@
 @charset 'utf-8';
 
+$contrast-warnings: false;
+
 @import 'settings';
 @import 'foundation';
 // @import 'motion-ui';
@@ -7,7 +9,7 @@
 @include foundation-global-styles;
 //@include foundation-grid;
 // @include foundation-flex-grid;
-// @include foundation-xy-grid-classes;
+@include foundation-xy-grid-classes;
 @include foundation-typography;
 @include foundation-button;
 @include foundation-forms;
@@ -20,7 +22,7 @@
 // @include foundation-callout;
 // @include foundation-card;
 // @include foundation-close-button;
-// @include foundation-menu;
+@include foundation-menu;
 // @include foundation-menu-icon;
 // @include foundation-drilldown-menu;
 // @include foundation-dropdown;
@@ -58,8 +60,15 @@
 @import 'components/fonts';
 @import 'components/base';
 @import 'components/button';
+@import 'components/menu';
+@import 'components/social';
 // @import 'components/offcanvas';
 
 // Sections
 @import 'sections/header';
+@import 'sections/promo';
+@import 'sections/about';
+@import 'sections/platform';
+@import 'sections/token';
+@import 'sections/roadmap';
 @import 'sections/footer';

@@ -2,11 +2,27 @@ mixin menu()
     -
         const menu = [
             {
-                title: 'title',
-                link: '#link'
-            }
+                title: 'HOME',
+                link: '#home'
+            },
+            {
+                title: 'ABOUT',
+                link: '#about'
+            },
+            {
+                title: 'PLATFORM',
+                link: '#platform'
+            },
+            {
+                title: 'TOKEN',
+                link: '#token'
+            },
+            {
+                title: 'ROADMAP',
+                link: '#roadmap'
+            },
         ]
-    ul.menu&attributes(attributes)
+    ul.menu(data-magellan='' data-animation-easing='swing' data-threshold='0')&attributes(attributes)
         each item in menu
             li
                 a(href=item.link)

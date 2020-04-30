@@ -1,12 +1,13 @@
 block const
 -
-    const title  = `${name ?  `${name} - ` : ''}Project`;
+    const title  = `${name ?  `${name} - ` : ''}EduShare`;
     const descr  = 'Description';
-    const domain = 'subdomain.salex.pro'
+    const domain = 'edushare.salex.pro'
 
 //- Components
 include components/_icons
-//- include components/_menu
+include components/_menu
+include components/_social
 
 doctype html
 html(lang="en")
@@ -15,7 +16,7 @@ html(lang="en")
         main.off-canvas-content.wrap(data-off-canvas-content)
             include sections/_header
             block content
-                include sections/_footer
+            include sections/_footer
             //- include components/_popup
         //- include components/_offcanvas
         block js

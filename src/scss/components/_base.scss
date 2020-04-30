@@ -45,3 +45,15 @@ a{
 svg{
     display: block;
 }
+
+h1, .h1, h2, .h2, h3, .h3{
+    font-feature-settings: 'ordn' on, 'ss01' on;
+}
+
+.lead{
+    color: $gray70;
+    &.text-center{
+        max-width: 800px;
+        margin: auto;
+    }
+}

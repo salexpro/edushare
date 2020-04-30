@@ -1,0 +1,112 @@
+$token-colors: (
+    red: $primary-color,
+    cyan: $secondary-color,
+    green: $success-color,
+    yello: $warning-color,
+    blue: #5C7CFA,
+    orange: #FF922B,
+    pink: #F06595
+);
+
+.token{
+    position: relative;
+    overflow: hidden;
+    padding: 56px 0 74px;
+    &_content {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 400px repeat(2, auto);
+        column-gap: 40px;
+        margin-top: 60px;
+    }
+    &_legend{
+        margin: 0;
+        list-style: none;
+        font-size: 24px;
+        color: $gray70;
+        &_item{
+            & + &{
+                margin-top: 12px;
+            }
+            &::before{
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                background-color: currentColor;
+                margin-right: 16px;
+            }
+            @each $name, $color in $token-colors{
+                &--#{ $name}{
+                    &::before{
+                        background-color: $color;
+                    }
+                }
+            }
+        }
+    }
+    &_table{
+        width: 100%;
+        border: 1px solid $gray20;
+        border-radius: 16px;
+        border-spacing: 0;
+        color: $gray80;
+        // border-collapse: collapse;
+        th{ 
+            padding: 15px 20px;
+        }
+        td{
+            padding: 17px 20px;
+            border-top: 1px solid $gray20;
+            &:last-child{
+                text-align: right;
+            }
+        }
+        &_header{
+            text-align: center;
+            color: $secondary-color;
+            margin: 0;
+        }
+    }
+    &_bottom{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 40px;
+        margin-top: 32px;
+        &_header{
+            margin-bottom: 4px;
+        }
+        &_descr{
+            color: $gray70;
+        }
+    }
+    &::before{
+        content: '';
+        position: absolute;
+        top: -150px;
+        right: 243px;
+        width: 235px;
+        height: 235px;
+        background-image: url(../assets/img/bubble_small.png);
+        background-size: cover;
+        @include breakpoint(retina){
+            background-image: url(../assets/img/bubble_small@2x.png);
+        }
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        left: -111px;
+        bottom: -74px;
+        width: 287px;
+        height: 288px;
+        background-image: url(../assets/img/bubble.png);
+        background-size: cover;
+        z-index: -1;
+        transform: rotate(30deg);
+        @include breakpoint(retina){
+            background-image: url(../assets/img/bubble@2x.png);
+        }
+    }
+}

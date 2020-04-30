@@ -8,7 +8,7 @@
 		},
 	{
 		"name": "New \"Run Script\" Step",
-		"scriptSourceString": "rm -rf docs/\ncp -rf build/ docs/\necho \"\\n\" >> docs/js/app.min.js\ncat docs/js/lib/fastnav.min.js >> docs/js/app.min.js\nrm -f build.zip\nzip -r build.zip build/ -x 'build/robots.txt' 'build/CNAME' '*.map' '*/\\.*'",
+		"scriptSourceString": "rm -f build.zip\nzip -r build.zip docs/ -x 'docs/robots.txt' 'docs/CNAME' '*.map' '*/\\.*'",
 		"scriptType": 1,
 		"scriptUUIDString": "6366FA1E-B734-4D93-BE1B-0AE5E5857F91",
 		"stepType": 2,
@@ -22,7 +22,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/.browserslistrc",
+		"oAP": "/docs/.browserslistrc",
 		"oF": 1
 		},
 	"/.eslintrc": {
@@ -30,7 +30,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/.eslintrc",
+		"oAP": "/docs/.eslintrc",
 		"oF": 1
 		},
 	"/.gitignore": {
@@ -38,7 +38,7 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/.gitignore",
+		"oAP": "/docs/.gitignore",
 		"oF": 1
 		},
 	"/babel.config.js": {
@@ -47,23 +47,17 @@
 		"ma": 1,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/build/babel.config.min.js",
+		"oAP": "/docs/babel.config.min.js",
 		"oF": 1,
 		"sC": 3,
 		"tS": 1
-		},
-	"/build": {
-		"ft": 65536,
-		"oA": 1,
-		"oAP": "/build/build",
-		"oF": 0
 		},
 	"/build.zip": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/build.zip",
+		"oAP": "/docs/build.zip",
 		"oF": 1
 		},
 	"/CNAME": {
@@ -71,31 +65,20 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/build/CNAME",
+		"oAP": "/docs/CNAME",
 		"oF": 0
 		},
 	"/docs": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "/build/docs",
+		"oAP": "/docs/docs",
 		"oF": 0
 		},
 	"/node_modules": {
 		"ft": 65536,
 		"oA": 1,
-		"oAP": "/build/node_modules",
+		"oAP": "/docs/node_modules",
 		"oF": 0
-		},
-	"/node_modules/jquery/dist/jquery.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 1,
-		"oAP": "/build/node_modules/jquery/dist/jquery.min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
 		},
 	"/node_modules/svg4everybody/dist/svg4everybody.js": {
 		"bF": 4,
@@ -103,7 +86,7 @@
 		"ma": 1,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/build/node_modules/svg4everybody/dist/svg4everybody.min.js",
+		"oAP": "/docs/node_modules/svg4everybody/dist/svg4everybody.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -111,7 +94,7 @@
 	"/package-lock.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/build/package-lock.json",
+		"oAP": "/docs/package-lock.json",
 		"oF": 1,
 		"oO": 0,
 		"oS": 0
@@ -119,7 +102,7 @@
 	"/package.json": {
 		"ft": 524288,
 		"oA": 1,
-		"oAP": "/build/package.json",
+		"oAP": "/docs/package.json",
 		"oF": 1,
 		"oO": 0,
 		"oS": 0
@@ -134,7 +117,7 @@
 		"ft": 4096,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/README.html",
+		"oAP": "/docs/README.html",
 		"oF": 1,
 		"oFM": 0,
 		"oS": 0,
@@ -148,34 +131,421 @@
 		"ft": 8192,
 		"hM": 0,
 		"oA": 2,
-		"oAP": "/build/robots.txt",
+		"oAP": "/docs/robots.txt",
 		"oF": 0
 		},
-	"/src/assets/favicon/.gitkeep": {
+	"/src/assets/favicon/android-chrome-192x192.png": {
+		"ft": 32768,
+		"iS": 10909,
+		"oA": 0,
+		"oAP": "/docs/assets/favicon/android-chrome-192x192.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/favicon/android-chrome-256x256.png": {
+		"ft": 32768,
+		"iS": 15702,
+		"oA": 0,
+		"oAP": "/docs/assets/favicon/android-chrome-256x256.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/favicon/apple-touch-icon.png": {
+		"ft": 32768,
+		"iS": 3809,
+		"oA": 0,
+		"oAP": "/docs/assets/favicon/apple-touch-icon.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/favicon/browserconfig.xml": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
-		"oA": 1,
-		"oAP": "/build/assets/favicon/.gitkeep",
-		"oF": 1
+		"oA": 2,
+		"oAP": "/docs/assets/favicon/browserconfig.xml",
+		"oF": 0
+		},
+	"/src/assets/favicon/favicon-16x16.png": {
+		"ft": 32768,
+		"iS": 775,
+		"oA": 0,
+		"oAP": "/docs/assets/favicon/favicon-16x16.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/favicon/favicon-32x32.png": {
+		"ft": 32768,
+		"iS": 1171,
+		"oA": 0,
+		"oAP": "/docs/assets/favicon/favicon-32x32.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/favicon/mstile-144x144.png": {
+		"ft": 32768,
+		"iS": 4401,
+		"oA": 0,
+		"oAP": "/docs/assets/favicon/mstile-144x144.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/favicon/mstile-150x150.png": {
+		"ft": 32768,
+		"iS": 4604,
+		"oA": 0,
+		"oAP": "/docs/assets/favicon/mstile-150x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/favicon/mstile-310x150.png": {
+		"ft": 32768,
+		"iS": 4995,
+		"oA": 0,
+		"oAP": "/docs/assets/favicon/mstile-310x150.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/favicon/mstile-310x310.png": {
+		"ft": 32768,
+		"iS": 10065,
+		"oA": 0,
+		"oAP": "/docs/assets/favicon/mstile-310x310.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/favicon/mstile-70x70.png": {
+		"ft": 32768,
+		"iS": 3206,
+		"oA": 0,
+		"oAP": "/docs/assets/favicon/mstile-70x70.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/favicon/safari-pinned-tab.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/favicon/safari-pinned-tab.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/favicon/site.webmanifest": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/docs/assets/favicon/site.webmanifest",
+		"oF": 0
 		},
 	"/src/assets/fonts/.gitkeep": {
 		"cB": 0,
 		"ft": 8192,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/assets/fonts/.gitkeep",
+		"oAP": "/docs/assets/fonts/.gitkeep",
 		"oF": 1
+		},
+	"/src/assets/img/arrows.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/arrows.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/img/bubble.png": {
+		"ft": 32768,
+		"iS": 7623,
+		"oA": 0,
+		"oAP": "/docs/assets/img/bubble.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/bubble@2x.png": {
+		"ft": 32768,
+		"iS": 12138,
+		"oA": 0,
+		"oAP": "/docs/assets/img/bubble@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/bubble_small.png": {
+		"ft": 32768,
+		"iS": 7784,
+		"oA": 0,
+		"oAP": "/docs/assets/img/bubble_small.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/bubble_small@2x.png": {
+		"ft": 32768,
+		"iS": 19495,
+		"oA": 0,
+		"oAP": "/docs/assets/img/bubble_small@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/donut.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/donut.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/img/hex.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/hex.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
 		},
 	"/src/assets/img/icons.svg": {
 		"ft": 2097152,
 		"miP": 1,
 		"oA": 0,
-		"oAP": "/build/assets/img/icons.svg",
+		"oAP": "/docs/assets/img/icons.svg",
 		"oF": 0,
 		"opt": 1,
-		"plM": 69982180343807,
-		"prP": 1
+		"plM": 65584133832703,
+		"prP": 0
+		},
+	"/src/assets/img/icons/businessman.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/icons/businessman.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/img/icons/card.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/icons/card.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/img/icons/diploma.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/icons/diploma.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/img/icons/fb.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/icons/fb.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/img/icons/in.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/icons/in.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/img/icons/network.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/icons/network.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/img/icons/school.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/icons/school.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/img/icons/tw.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/icons/tw.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/img/icons/users.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/icons/users.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65584150609919,
+		"prP": 0
+		},
+	"/src/assets/img/logo.svg": {
+		"ft": 2097152,
+		"miP": 1,
+		"oA": 0,
+		"oAP": "/docs/assets/img/logo.svg",
+		"oF": 0,
+		"opt": 1,
+		"plM": 65566970740735,
+		"prP": 0
+		},
+	"/src/assets/img/og-image.png": {
+		"ft": 32768,
+		"iS": 117151,
+		"oA": 0,
+		"oAP": "/docs/assets/img/og-image.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/promo.png": {
+		"ft": 32768,
+		"iS": 80506,
+		"oA": 0,
+		"oAP": "/docs/assets/img/promo.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/promo@2x.png": {
+		"ft": 32768,
+		"iS": 194490,
+		"oA": 0,
+		"oAP": "/docs/assets/img/promo@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/roadmap.png": {
+		"ft": 32768,
+		"iS": 64310,
+		"oA": 0,
+		"oAP": "/docs/assets/img/roadmap.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/roadmap@2x.png": {
+		"ft": 32768,
+		"iS": 159249,
+		"oA": 0,
+		"oAP": "/docs/assets/img/roadmap@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/structure.png": {
+		"ft": 32768,
+		"iS": 78971,
+		"oA": 0,
+		"oAP": "/docs/assets/img/structure.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/assets/img/structure@2x.png": {
+		"ft": 32768,
+		"iS": 194520,
+		"oA": 0,
+		"oAP": "/docs/assets/img/structure@2x.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 1,
+		"oT": 1,
+		"q": 100
+		},
+	"/src/favicon.ico": {
+		"cB": 0,
+		"ft": 8192,
+		"hM": 0,
+		"oA": 2,
+		"oAP": "/docs/favicon.ico",
+		"oF": 0
 		},
 	"/src/js/app.js": {
 		"bF": 4,
@@ -183,18 +553,7 @@
 		"ma": 1,
 		"mi": 1,
 		"oA": 0,
-		"oAP": "/build/js/app.min.js",
-		"oF": 0,
-		"sC": 3,
-		"tS": 1
-		},
-	"/src/js/lib/fastnav.js": {
-		"bF": 4,
-		"ft": 64,
-		"ma": 1,
-		"mi": 1,
-		"oA": 0,
-		"oAP": "/build/js/lib/fastnav.min.js",
+		"oAP": "/docs/js/app.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -205,7 +564,7 @@
 		"ma": 1,
 		"mi": 1,
 		"oA": 1,
-		"oAP": "/build/js/lib/foundation-explicit-pieces.min.js",
+		"oAP": "/docs/js/lib/foundation-explicit-pieces.min.js",
 		"oF": 1,
 		"sC": 3,
 		"tS": 1
@@ -216,7 +575,7 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/_layout.html",
+		"oAP": "/docs/_layout.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -226,7 +585,7 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/_head.html",
+		"oAP": "/docs/_head.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -236,7 +595,7 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/_icons.html",
+		"oAP": "/docs/_icons.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -246,7 +605,7 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/_menu.html",
+		"oAP": "/docs/_menu.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -256,7 +615,7 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/_offcanvas.html",
+		"oAP": "/docs/_offcanvas.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -266,7 +625,17 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/_popup.html",
+		"oAP": "/docs/_popup.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/components/_social.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/_social.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -276,7 +645,17 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/build/index.html",
+		"oAP": "/docs/index.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_about.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/_about.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -286,7 +665,7 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/_footer.html",
+		"oAP": "/docs/_footer.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -296,7 +675,47 @@
 		"ft": 512,
 		"hM": 0,
 		"oA": 1,
-		"oAP": "/build/_header.html",
+		"oAP": "/docs/_header.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_platform.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/_platform.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_promo.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/_promo.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_roadmap.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/_roadmap.html",
+		"oF": 0,
+		"oS": 0
+		},
+	"/src/pug/sections/_token.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/_token.html",
 		"oF": 0,
 		"oS": 0
 		},
@@ -308,7 +727,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/build/css/_settings.css",
+		"oAP": "/docs/css/_settings.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
@@ -321,7 +740,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "/build/css/app.css",
+		"oAP": "/docs/css/app.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
@@ -334,7 +753,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/build/scss/css/_base.css",
+		"oAP": "/docs/scss/css/_base.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
@@ -347,7 +766,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/build/scss/css/_button.css",
+		"oAP": "/docs/scss/css/_button.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
@@ -360,7 +779,20 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/build/scss/css/_fonts.css",
+		"oAP": "/docs/scss/css/_fonts.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 1
+		},
+	"/src/scss/components/_menu.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/docs/scss/css/_menu.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
@@ -373,7 +805,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/build/scss/css/_offcanvas.css",
+		"oAP": "/docs/scss/css/_offcanvas.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
@@ -386,7 +818,33 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/build/scss/css/_popup.css",
+		"oAP": "/docs/scss/css/_popup.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 1
+		},
+	"/src/scss/components/_social.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/docs/scss/css/_social.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 1
+		},
+	"/src/scss/sections/_about.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/docs/scss/css/_about.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
@@ -399,7 +857,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/build/scss/css/_footer.css",
+		"oAP": "/docs/scss/css/_footer.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
@@ -412,7 +870,59 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 1,
-		"oAP": "/build/scss/css/_header.css",
+		"oAP": "/docs/scss/css/_header.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 1
+		},
+	"/src/scss/sections/_platform.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/docs/scss/css/_platform.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 1
+		},
+	"/src/scss/sections/_promo.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/docs/scss/css/_promo.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 1
+		},
+	"/src/scss/sections/_roadmap.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/docs/scss/css/_roadmap.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 1
+		},
+	"/src/scss/sections/_token.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/docs/scss/css/_token.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
@@ -424,11 +934,11 @@
 	},
 "projectAttributes": {
 	"creationDate": 505831586,
-	"displayValue": "Wow project! Such boilerplate!",
+	"displayValue": "EduShare",
 	"displayValueWasSetByUser": 1,
-	"iconImageName": "meme-doge",
+	"iconImageName": "/src/assets/favicon/apple-touch-icon.png",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 583538925.98218703
+	"lastBuiltDate": 609954589.470505
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -672,7 +1182,7 @@
 	"browserRefreshDelay": 0,
 	"browserslistString": ">0.2%, last 2 versions, Firefox ESR, not dead, IE >= 9",
 	"buildFolderActive": 1,
-	"buildFolderName": "build",
+	"buildFolderName": "docs",
 	"cleanBuild": 1,
 	"coffeeLintFlags2": {
 		"arrow_spacing": {
@@ -2442,7 +2952,7 @@
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
 		"autoOutputPathStyle": 0,
-		"pluginMask": 69982197121023
+		"pluginMask": 65584150609919
 		},
 	"languageDefaultsTS": {
 		"autoOutputAction": 0,
@@ -2777,7 +3287,7 @@
 		},
 	"uglifyMangleNames": 1,
 	"uglifyReservedNamesString": "$",
-	"websiteRelativeRoot": "/build"
+	"websiteRelativeRoot": "/docs"
 	},
 "settingsFileVersion": "3"
 }

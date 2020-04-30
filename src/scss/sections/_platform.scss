@@ -1,0 +1,51 @@
+.platform{
+    background-color: $gray10;
+    padding: 56px 0 80px;
+    &_content{
+        display: grid;
+        grid-template-columns: auto 41.9%;
+        margin-top: 30px;
+    }
+    &_structure{
+        display: grid;
+        grid-template-columns: 0.96fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        column-gap: 30px;
+        padding: 25px 0;
+        margin: 0;
+    }
+    &_item{
+        display: grid;
+        grid-template-columns: 64px auto;
+        column-gap: 16px;
+        align-items: center;
+        &_network{
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: -77px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' height='258' viewBox='0 0 231 258'%3E%3Cpath fill='%233FCCDF' d='M199.707 12.293a1 1 0 00-1.414 0l-6.364 6.364a1 1 0 101.414 1.414L199 14.414l5.657 5.657a1 1 0 101.414-1.414l-6.364-6.364zM200 77V13h-2v64h2zm-1.707 168.707a.999.999 0 001.414 0l6.364-6.364a.999.999 0 10-1.414-1.414L199 243.586l-5.657-5.657a.999.999 0 10-1.414 1.414l6.364 6.364zM198 181v64h2v-64h-2zM4.456 6.035a1 1 0 00-.703 1.227l2.357 8.686a1 1 0 101.93-.524l-2.095-7.72 7.72-2.096a1 1 0 00-.523-1.93L4.456 6.035zm156.041 89.097l-155.282-89-.994 1.736 155.282 89 .994-1.736zm-90.204 33.161a1 1 0 000 1.414l6.364 6.364a1 1 0 101.414-1.414L72.414 129l5.657-5.657a1 1 0 10-1.414-1.414l-6.364 6.364zM148 128H71v2h77v-2zM4.102 250.136a1 1 0 00.71 1.223l8.7 2.307a1 1 0 10.512-1.933l-7.733-2.051 2.051-7.733a1 1 0 10-1.933-.512l-2.307 8.699zm154.396-90.001L4.566 249.528l1.005 1.729 153.931-89.392-1.004-1.73z'/%3E%3C/svg%3E%0A");
+            background-repeat: no-repeat;
+            // background-size: auto 258px;
+            background-position: center left 3px;
+            &::after{
+                content: '';
+                position: absolute;
+                top: calc(50% - 52px);
+                left: calc(50% - 52px);
+                width: 104px;
+                height: 104px;
+                border-radius: 50%;
+                background-color: #DEF5F9;
+                // background: red;
+                z-index: -1;
+                // opacity: 0.16;
+            }
+        }
+        &_title{
+            color: $gray80;
+        }
+    }
+}
