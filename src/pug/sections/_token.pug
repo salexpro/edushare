@@ -42,15 +42,15 @@ section#token.token
         h2.text-center
             | Token Allocation
         .token_content
-            .token_donut
+            .wow.token_donut
                 svg(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 400 400')
-                    path(stroke='#F74848', stroke-width='80', d='M200 40a159.999 159.999 0 01113.137 273.137')
-                    path(stroke='#3FCCDF', stroke-width='80', d='M307.253 318.73a160.004 160.004 0 01-182.332 22.561')
-                    path(stroke='#51CF66', stroke-width='80', d='M118.818 337.875a159.931 159.931 0 01-16.609-11.238')
-                    path(stroke='#FCC419', stroke-width='80', d='M97.65 322.982a159.998 159.998 0 01-51.505-79.066')
-                    path(stroke='#5C7CFA', stroke-width='80', d='M44.464 237.529a159.997 159.997 0 015.9-94.177')
-                    path(stroke='#FF922B', stroke-width='80', d='M52.864 137.143a160 160 0 0161.011-71.986')
-                    path(stroke='#F06595', stroke-width='80', d='M118.97 62.036a160 160 0 0173.989-21.881')
+                    path(data-color='red' stroke='#F74848', stroke-width='80', d='M200 40a159.999 159.999 0 01113.137 273.137')
+                    path(data-color='cyan' stroke='#3FCCDF', stroke-width='80', d='M307.253 318.73a160.004 160.004 0 01-182.332 22.561')
+                    path(data-color='green' stroke='#51CF66', stroke-width='80', d='M118.818 337.875a159.931 159.931 0 01-16.609-11.238')
+                    path(data-color='yello' stroke='#FCC419', stroke-width='80', d='M97.65 322.982a159.998 159.998 0 01-51.505-79.066')
+                    path(data-color='blue' stroke='#5C7CFA', stroke-width='80', d='M44.464 237.529a159.997 159.997 0 015.9-94.177')
+                    path(data-color='orange' stroke='#FF922B', stroke-width='80', d='M52.864 137.143a160 160 0 0161.011-71.986')
+                    path(data-color='pink' stroke='#F06595', stroke-width='80', d='M118.97 62.036a160 160 0 0173.989-21.881')
             ul.token_legend
                 each item in legend
                     li.token_legend_item(class=`token_legend_item--${item.color}`)

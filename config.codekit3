@@ -15,7 +15,7 @@
 		"uuidString": "6DF9D747-8413-4879-B214-3F05CAB77409"
 		}
 	],
-"creatorBuild": "32137",
+"creatorBuild": "32147",
 "files": {
 	"/.browserslistrc": {
 		"cB": 0,
@@ -98,6 +98,17 @@
 		"mi": 1,
 		"oA": 1,
 		"oAP": "/docs/node_modules/svg4everybody/dist/svg4everybody.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
+	"/node_modules/wow.js/dist/wow.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/docs/node_modules/wow.js/dist/wow.min.js",
 		"oF": 0,
 		"sC": 3,
 		"tS": 1
@@ -589,6 +600,17 @@
 		"sC": 3,
 		"tS": 1
 		},
+	"/src/js/components/_anim.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/docs/js/components/_anim.min.js",
+		"oF": 0,
+		"sC": 3,
+		"tS": 1
+		},
 	"/src/js/lib/foundation-explicit-pieces.js": {
 		"bF": 4,
 		"ft": 64,
@@ -597,6 +619,17 @@
 		"oA": 1,
 		"oAP": "/docs/js/lib/foundation-explicit-pieces.min.js",
 		"oF": 1,
+		"sC": 3,
+		"tS": 1
+		},
+	"/src/js/plugins/_DrawSVGPlugin.js": {
+		"bF": 4,
+		"ft": 64,
+		"ma": 1,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "/docs/js/plugins/_DrawSVGPlugin.min.js",
+		"oF": 0,
 		"sC": 3,
 		"tS": 1
 		},
@@ -969,7 +1002,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/src/assets/favicon/apple-touch-icon.png",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 609990848.99568295
+	"lastBuiltDate": 610035231.10753405
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

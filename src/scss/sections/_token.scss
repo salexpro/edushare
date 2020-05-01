@@ -58,6 +58,7 @@ $token-colors: (
             }
         }
         &_item{
+            opacity: 0;
             & + &{
                 margin-top: 12px;
                 @include breakpoint(small down){

@@ -1,7 +1,7 @@
 block const
 -
     const title  = `${name ?  `${name} - ` : ''}EduShare`;
-    const descr  = 'Description';
+    const descr  = 'An innovative integration of blockchain and education industry';
     const domain = 'edushare.salex.pro'
 
 //- Components
@@ -20,4 +20,5 @@ html(lang="en")
             //- include components/_popup
         include components/_offcanvas
         block js
+            script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js")
             script(src="./js/app.min.js")
