@@ -1,11 +1,35 @@
 .roadmap{
     padding: 80px 0;
     background: linear-gradient(180deg, #F5F8FA 0%, $white 100%);
+    @include breakpoint(medium down){
+        padding-bottom: 70px;
+    }
+    @include breakpoint(small down){
+        padding: 64px 0 56px;
+    }
     &_container{
         display: grid;
         grid-template-columns: auto 1fr ;
         column-gap: 40px;
         align-items: center;
+        @include breakpoint(medium down){
+            grid-template-columns: auto;
+            justify-items: center;
+            row-gap: 37px;
+        }
+    }
+    &_content{
+        @include breakpoint(medium down){
+            justify-self: stretch;
+        }
+        @include breakpoint(small down){
+            text-align: center;
+        }
+    }
+    &_header{
+        @include breakpoint(medium down){
+            text-align: center;
+        }
     }
     &_items{
         margin: 50px 0 0;
@@ -13,6 +37,20 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         column-gap: 40px;
+        @include breakpoint(medium down){
+            margin-top: 32px;
+            column-gap: 23px;
+            grid-template-columns: 35.5% 1fr 22.54%;
+        }
+        @include breakpoint(767 down){
+            grid-template-columns: 1fr 1fr auto;
+        }
+        @include breakpoint(small down){
+            grid-template-columns: auto;
+            justify-content: center;
+            margin-top: 28px;
+            row-gap: 28px;
+        }
     }
     &_item{
         &:not(:last-child){
@@ -20,14 +58,24 @@
                 display: flex;
                 align-items: center;
                 white-space: nowrap;
+                @include breakpoint(small down){
+                    justify-content: center;
+                }
                 &::after{
                     content: '';
                     height: 16px;
                     width: 100%;
                     margin-right: -32px;
                     margin-left: 8px;
-                    background-image: url("data:image/svg+xml,%3Csvg width='132' height='16' viewBox='0 0 132 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M131.707 8.70711C132.098 8.31658 132.098 7.68342 131.707 7.29289L125.343 0.928932C124.953 0.538408 124.319 0.538408 123.929 0.928932C123.538 1.31946 123.538 1.95262 123.929 2.34315L129.586 8L123.929 13.6569C123.538 14.0474 123.538 14.6805 123.929 15.0711C124.319 15.4616 124.953 15.4616 125.343 15.0711L131.707 8.70711ZM0 9H131V7H0V9Z' fill='%2337B4C4'/%3E%3C/svg%3E%0A");
-                    background-position: center right;
+                    background-image: url("data:image/svg+xml,%3Csvg width='231' height='16' viewBox='0 0 231 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M230.707 8.70709C231.098 8.31656 231.098 7.6834 230.707 7.29287L224.343 0.928913C223.953 0.538388 223.319 0.538388 222.929 0.928913C222.538 1.31944 222.538 1.9526 222.929 2.34313L228.586 7.99998L222.929 13.6568C222.538 14.0474 222.538 14.6805 222.929 15.071C223.319 15.4616 223.953 15.4616 224.343 15.071L230.707 8.70709ZM8.74228e-08 9L230 8.99998L230 6.99998L-8.74228e-08 7L8.74228e-08 9Z' fill='%2337B4C4'/%3E%3C/svg%3E%0A");
+                    background-position: center right 1px;
+                    background-repeat: no-repeat;
+                    @include breakpoint(medium down){
+                        margin-right: -15px;
+                    }
+                    @include breakpoint(small down){
+                        display: none;
+                    }
                 }
             }
         }
@@ -38,6 +86,9 @@
             margin: 24px 0 0;
             list-style: none;
             color: $gray80;
+            @include breakpoint(small down){
+                margin-top: 12px;
+            }
             li + li {
                 margin-top: 8px;    
             }

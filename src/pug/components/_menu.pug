@@ -25,5 +25,5 @@ mixin menu()
     ul.menu(data-magellan='' data-animation-easing='swing' data-threshold='0')&attributes(attributes)
         each item in menu
             li
-                a(href=item.link)
+                a(href=item.link data-close='')
                     =item.title

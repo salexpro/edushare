@@ -5,6 +5,13 @@
     padding-top: 40px;
     padding-bottom: 40px;
     position: relative;
+    @include breakpoint(medium down){
+        padding-bottom: 30px;
+    }
+    @include breakpoint(small down){
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
     &::after{
         content: '';
         position: absolute;
@@ -19,5 +26,97 @@
         @include breakpoint(retina){
             background-image: url(../assets/img/bubble_small@2x.png);
         }
+        @include breakpoint(medium down){
+            left: auto;
+            right: 19.6%;
+        }
+        @include breakpoint(small down){
+            width: 128px;
+            height: 128px;
+            right: -16px;
+            top: -66px;
+        }
+    }
+    &_logo{
+        position: relative;
+        z-index: 14;
+        @include breakpoint(medium down){
+            margin-right: auto;
+        }
+        @include breakpoint(small down){
+            height: 36px;
+            img{
+                max-height: 100%;
+            }
+        }
+    }
+    &_hamb{
+        position: relative;
+        z-index: 14;
+        display: none;
+        -webkit-tap-highlight-color: transparent;
+        user-select: none;
+        transition: 400ms;
+        width: 50px;
+        margin: -5px 30px -5px -15px;
+        @include breakpoint(medium down){
+            display: block;
+        }
+        @include breakpoint(small down){
+            margin: -14px 15px -14px -15px;
+        }
+        &[aria-expanded="true"]{
+            .header_hamb{
+                &_icon{
+                    transform: rotate(45deg);
+                }
+                &_line{
+                    &--top{
+                        stroke-dashoffset: -98px;
+                    }
+                    &--bottom{
+                        stroke-dashoffset: -138px;
+                    }
+                }
+            }
+        }
+        &_icon{
+            display: block;
+            width: 100%;
+            transition: 400ms;
+        }
+        &_line{
+            fill: none;
+            transition: stroke-dasharray 500ms, stroke-dashoffset 500ms;
+            stroke: $gray80;
+            stroke-width: 4;
+            // stroke-linecap: round;
+            &--top{
+                stroke-dasharray: 40 139;
+            }
+            &--bottom{
+                stroke-dasharray: 40 180;
+            }
+        }
+    }
+    &_mobile{
+        position: absolute;
+        opacity: 0;
+        transition: transform 350ms ease, opacity 350ms ease;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        padding-bottom: 30px;
+        transform: translateY(-30px);
+        @include breakpoint(small down){
+            height: 100%;
+            max-height: 385px;
+            padding: 72px 24px 30px;
+            // transform: translateY(-100%);
+        }
+        &.is-open{
+            opacity: 1;
+        }
+        
     }
 }

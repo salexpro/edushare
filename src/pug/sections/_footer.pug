@@ -2,8 +2,10 @@ footer.footer
     .grid-container
         .footer_top
             .footer_logo
-                img(src="./assets/img/logo.svg", alt="EduShare")
-            +menu
+                picture
+                    source(srcset="./assets/img/logo.svg" media="(min-width: 640px)")
+                    img(src="./assets/img/logo_footer.svg", alt="EduShare")
+            +menu()(class='menu--footer')
             a.button.secondary(href="#" download)
                 | Download Whitepaper
         .footer_bottom

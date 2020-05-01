@@ -1,19 +1,48 @@
 .footer{
     margin-top: auto;
     padding-bottom: 40px;
+    @include breakpoint(medium down){
+        padding: 20px 0 84px;
+    }
+    @include breakpoint(small down){
+        padding: 0 0 48px;
+    }
     &_top{
         display: flex;
         align-items: center;
         justify-content: space-between;
         margin-bottom: 40px;
+        @include breakpoint(medium down){
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 24px;
+        }
+        @include breakpoint(small down){
+            flex-direction: column;
+            margin-bottom: 32px;
+        }
+    }
+    &_logo{
+        @include breakpoint(medium down){
+            margin-right: auto;
+        }
+        @include breakpoint(small down){
+            margin: 0 auto 30px;
+        }
     }
     &_bottom{
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include breakpoint(small down){
+            flex-direction: column;
+        }
     }
     &_copyright{
         font-size: 16px;
         color: $gray60;
+        @include breakpoint(small down){
+            margin-top: 24px;
+        }
     }
 }

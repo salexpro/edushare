@@ -3,9 +3,17 @@
     overflow: hidden;
     padding-top: 60px;
     padding-bottom: 80px;
+    @include breakpoint(medium down){
+        padding-top: 80px;
+        padding-bottom: 20px;
+    }
+    @include breakpoint(small down){
+        padding-top: 57px;
+        padding-bottom: 64px;
+    }
     &_platform{
         display: grid;
-        grid-template-columns: repeat(3, 360px);
+        grid-template-columns: repeat(3, minmax(auto, 360px));
         grid-template-rows: auto 162px 162px auto;
         grid-template-areas: '. i2 .'
                              'i1 hex i3'
@@ -15,23 +23,70 @@
         align-items: start;
         margin: 73px 0 0;
         list-style: none;
+        @include breakpoint(medium down){
+            margin-top: -7px;
+            grid-gap: 0 24px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 140px 262px 262px 140px;
+            // align-items: stretch;
+        }
+        @include breakpoint(small down){
+            margin-top: 48px;
+            grid-template-columns: minmax(auto, 350px);
+            row-gap: 8px;
+            grid-template-rows: repeat(7, auto);
+            justify-content: center;
+            grid-template-areas: 'i1'
+                                 'i2'
+                                 'i3'
+                                 'hex'
+                                 'i4'
+                                 'i5'
+                                 'i6';
+        }
     }
     &_item{
+        position: relative;
         background: rgba($secondary-color, 0.16);
         border-radius: 16px;
         max-width: 360px;
-        padding: 30px 30px 35px;
+        padding: 30px 20px 35px;
         text-align: center;
+        @include breakpoint(medium down){
+            padding: 14px 10px 18px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            min-height: 140px;
+        }
+        @include breakpoint(small down){
+            min-height: 100px;
+            padding: 20px 18px;
+        }
         @for $i from 1 through 6 {
             &--#{$i}{
                 grid-area: i#{$i};
             }
         }
-        &--4, &--5{
+        &--2{
+            @include breakpoint(medium only){
+                bottom: -60px;
+            }
+        }
+        &--5{
+            @include breakpoint(medium only){
+                top: -60px;
+            }
+        }
+        &--4, &--6{
             align-self: end;
         }
         &_descr{
             font-size: 24px;
+            color: $gray80;
+            @include breakpoint(small down){
+                font-size: 18px;
+            }
         }
     }
     &_hex{
@@ -40,13 +95,28 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 100%;
+        // width: 100%;
         height: 100%;
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 362 366'%3E%3Cpath fill='%23fff' stroke='%233FCCDF' stroke-width='2' d='M169.5 83.794a23 23 0 0123 0l68.665 39.644a22.999 22.999 0 0111.5 19.918v79.288c0 8.217-4.384 15.81-11.5 19.918L192.5 282.206a23.003 23.003 0 01-23 0l-68.665-39.644a22.999 22.999 0 01-11.5-19.918v-79.288c0-8.217 4.384-15.81 11.5-19.918L169.5 83.794z'/%3E%3Cpath fill='%233FCCDF' d='M181.707.293a1 1 0 00-1.414 0l-6.364 6.364a1 1 0 101.414 1.414L181 2.414l5.657 5.657a1 1 0 101.414-1.414L181.707.293zM182 81V1h-2v80h2zm-1.707 284.707a.999.999 0 001.414 0l6.364-6.364a.999.999 0 10-1.414-1.414L181 363.586l-5.657-5.657a.999.999 0 10-1.414 1.414l6.364 6.364zM180 285v80h2v-80h-2zM4.034 282.741a1 1 0 00.707 1.225l8.694 2.329a1 1 0 10.517-1.932l-7.727-2.07 2.07-7.728a1 1 0 10-1.932-.517l-2.329 8.693zm87.069-50.607l-86.603 50 1 1.732 86.603-50-1-1.732zM4.741 82.034a1 1 0 00-.707 1.225l2.33 8.693a1 1 0 001.931-.517l-2.07-7.728 7.727-2.07a1 1 0 00-.518-1.932l-8.693 2.33zm87.362 50.1l-86.603-50-1 1.732 86.603 50 1-1.732zm265.875-48.447a1 1 0 00-.707-1.225l-8.693-2.329a1 1 0 00-.518 1.932l7.727 2.07-2.07 7.728a1 1 0 001.932.517l2.329-8.693zm-87.068 50.607l86.602-50-1-1.732-86.602 50 1 1.732zm85.951 149.672a1 1 0 00.707-1.225l-2.329-8.693a1 1 0 10-1.932.517l2.071 7.728-7.728 2.07a1 1 0 00.518 1.932l8.693-2.329zm-87.361-50.1l86.603 50 1-1.732-86.603-50-1 1.732z'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         background-position: center;
         color: $cyan60;
-        margin: 0;
+        margin: 0 -20px;
+        @media #{breakpoint(768)} and #{breakpoint(medium down)} {
+            margin: 0 
+                calc(   
+                    -70px + 50 * (100vw - 768px) /
+                    (#{strip-unit(map-get($breakpoints, large))} - 768)
+                );
+        }
+        @include breakpoint(767 down){
+            margin: 0 -70px;
+        }
+        @include breakpoint(small down){
+            margin: 0;
+            height: 286px;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 214 286'%3E%3Cpath fill='%23fff' stroke='%233FCCDF' stroke-width='2' d='M95.5 43.794a23 23 0 0123 0l68.665 39.644a23 23 0 0111.5 19.918v79.288c0 8.217-4.384 15.81-11.5 19.918L118.5 242.206a23.003 23.003 0 01-23 0l-68.665-39.644a22.999 22.999 0 01-11.5-19.918v-79.288a23 23 0 0111.5-19.918L95.5 43.794z'/%3E%3Cpath fill='%233FCCDF' d='M107.707.293a1 1 0 00-1.414 0l-6.364 6.364a1 1 0 001.414 1.414L107 2.414l5.657 5.657a1 1 0 101.414-1.414L107.707.293zM108 41V1h-2v40h2zm-1.707 244.707a.999.999 0 001.414 0l6.364-6.364a.999.999 0 10-1.414-1.414L107 283.586l-5.657-5.657a.999.999 0 10-1.414 1.414l6.364 6.364zM106 245v40h2v-40h-2z'/%3E%3C/svg%3E");
+        }
     }
     &::after{
         content: '';
@@ -58,8 +128,19 @@
         background-image: url(../assets/img/bubble.png);
         background-size: cover;
         transform: rotate(30deg);
+        z-index: -1;
         @include breakpoint(retina){
             background-image: url(../assets/img/bubble@2x.png);
+        }
+        @include breakpoint(medium down){
+            left: -143px;
+            bottom: -60px;
+        }
+        @include breakpoint(small down){
+            width: 203px;
+            height: 204px;
+            left: -100px;
+            bottom: -94px;
         }
     }
 }

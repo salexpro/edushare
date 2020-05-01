@@ -52,6 +52,10 @@ h1, .h1, h2, .h2, h3, .h3{
 
 .lead{
     color: $gray70;
+    @include breakpoint(small down){
+        font-size: 18px;
+        line-height: 1.389;
+    }
     &.text-center{
         max-width: 800px;
         margin: auto;

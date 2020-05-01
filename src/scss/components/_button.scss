@@ -12,4 +12,8 @@ button {
     line-height: 1.25;
     border: 0;
     min-width: 300px;
+    @include breakpoint(small down){
+        width: 100%;
+        max-width: 350px;   
+    }
 }

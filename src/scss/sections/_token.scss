@@ -12,21 +12,57 @@ $token-colors: (
     position: relative;
     overflow: hidden;
     padding: 56px 0 74px;
+    @include breakpoint(medium down){
+        padding-bottom: 80px;
+    }
+    @include breakpoint(small down){
+        padding-bottom: 60px;
+    }
     &_content {
         display: grid;
         align-items: center;
-        grid-template-columns: 400px repeat(2, auto);
+        grid-template-areas: 'donut legend table';
+        grid-template-columns: minmax(auto, 400px) repeat(2, auto);
         column-gap: 40px;
         margin-top: 60px;
+        @include breakpoint(medium down){
+            grid-template-columns: minmax(auto, 400px) auto;
+            grid-template-areas: 'donut legend'
+                                 'table table';
+            grid-gap: 60px;
+            justify-content: center;
+        }
+        @include breakpoint(small down){
+            margin-top: 55px;
+            row-gap: 24px;
+            grid-template-columns: minmax(auto, 350px);
+            grid-template-areas: 'donut'
+                                 'legend'
+                                 'table';
+        }
+    }
+    &_donut{
+        grid-area: donut;
     }
     &_legend{
+        grid-area: legend;
         margin: 0;
         list-style: none;
         font-size: 24px;
         color: $gray70;
+        @include breakpoint(small down){
+            font-size: 18px;
+            columns: 2;
+            small{
+                font-size: 18px;
+            }
+        }
         &_item{
             & + &{
                 margin-top: 12px;
+                @include breakpoint(small down){
+                    margin-top: 16px;
+                }
             }
             &::before{
                 content: '';
@@ -46,12 +82,19 @@ $token-colors: (
             }
         }
     }
+    &_blockchain{
+        grid-area: table;
+        @include breakpoint(small down){
+            padding-top: 20px;
+        }
+    }
     &_table{
         width: 100%;
         border: 1px solid $gray20;
         border-radius: 16px;
         border-spacing: 0;
         color: $gray80;
+        background: $white;
         // border-collapse: collapse;
         th{ 
             padding: 15px 20px;
@@ -59,8 +102,16 @@ $token-colors: (
         td{
             padding: 17px 20px;
             border-top: 1px solid $gray20;
+            &:first-child{
+                @include breakpoint(small down){
+                    padding-right: 0;
+                }
+            }
             &:last-child{
                 text-align: right;
+                @include breakpoint(small down){
+                    padding-left: 0;
+                }
             }
         }
         &_header{
@@ -74,6 +125,15 @@ $token-colors: (
         grid-template-columns: repeat(2, 1fr);
         column-gap: 40px;
         margin-top: 32px;
+        @include breakpoint(medium down){
+            margin-top: 44px;
+            padding: 0 20px;
+        }
+        @include breakpoint(small down){
+            margin-top: 24px;
+            padding: 0;
+            column-gap: 0;
+        }
         &_header{
             margin-bottom: 4px;
         }
@@ -90,8 +150,17 @@ $token-colors: (
         height: 235px;
         background-image: url(../assets/img/bubble_small.png);
         background-size: cover;
+        z-index: -1;
         @include breakpoint(retina){
             background-image: url(../assets/img/bubble_small@2x.png);
+        }
+        @include breakpoint(medium down){
+            right: -117px;
+            top: auto;
+            bottom: 45px;
+        }
+        @include breakpoint(small down){
+            bottom: -78px;
         }
     }
     &::after{
@@ -107,6 +176,17 @@ $token-colors: (
         transform: rotate(30deg);
         @include breakpoint(retina){
             background-image: url(../assets/img/bubble@2x.png);
+        }
+        @include breakpoint(medium down){
+            left: -111px;
+            bottom: auto;
+            top: -121px;
+        }
+        @include breakpoint(small down){
+            width: 189px;
+            height: 190px;
+            left: -80px;
+            top: -70px;
         }
     }
 }

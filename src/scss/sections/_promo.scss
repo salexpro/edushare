@@ -1,15 +1,31 @@
 .promo{
     position: relative;
+    @include breakpoint(small down){
+        padding-top: 40px;
+    }
     &_container{
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @include breakpoint(medium down){
+            flex-direction: column-reverse;
+        }
     }
     &_content{
         max-width: 460px;
+        @include breakpoint(medium down){
+            text-align: center;
+            margin-top: 40px;
+        }
     }
     &_buttons{
         margin-top: 73px;
+        @include breakpoint(medium down){
+            margin-top: 53px;
+        }
+        @include breakpoint(small down){
+            margin-top: 36px;
+        }
     }
     &::after{
         content: '';
@@ -23,6 +39,15 @@
         z-index: -1;
         @include breakpoint(retina){
             background-image: url(../assets/img/bubble@2x.png);
+        }
+        @include breakpoint(medium down){
+            bottom: 233px;
+        }
+        @include breakpoint(small down){
+            width: 171px;
+            height: 172px;
+            left: -106px;
+            bottom: 80px;
         }
     }
 }

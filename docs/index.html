@@ -21,27 +21,34 @@
     <meta name="twitter:description" content="Description">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content="https://edushare.salex.pro/assets/img/og-image.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png?ckcachebust=609954585">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png?ckcachebust=e126d29c737ae9aed1f1fa6166e064e4">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png?ckcachebust=3f1d8c21b51fa84798594bb66b020f4e">
-    <link rel="manifest" href="./assets/favicon/site.webmanifest?ckcachebust=5b547c113c342185d0e960a358469e35">
-    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg?ckcachebust=609954585" color="#3fccdf">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicon/apple-touch-icon.png?ckcachebust=3c1b09f9b2ebc8cd9d329209b488c802">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon/favicon-32x32.png?ckcachebust=b0735cb4e4942108c16422ed5b1532ae">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon/favicon-16x16.png?ckcachebust=c8eb168b37d0d076f13d11b86b2f370e">
+    <link rel="manifest" href="./assets/favicon/site.webmanifest?ckcachebust=a1869e5bbc286a8bacba4e9eef79a201">
+    <link rel="mask-icon" href="./assets/favicon/safari-pinned-tab.svg?ckcachebust=609990845" color="#3fccdf">
     <meta name="msapplication-TileColor" content="#3fccdf">
     <meta name="msapplication-config" content="./assets/favicon/browserconfig.xml">
     <meta name="theme-color" content="#3fccdf">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./css/app.css?ckcachebust=bb60bdd79b2c2aa9f765ef7145a63022">
+    <link rel="stylesheet" href="./css/app.css?ckcachebust=6897dd691de735b22e2cfbd85aa847fa">
   </head>
   <body>
     <main class="off-canvas-content wrap" data-off-canvas-content>
       <header class="grid-container header" id="home">
+        <button class="header_hamb" aria-label="Открыть/Закрыть меню" data-toggle="menu" aria-expanded="false" aria-controls="menu">
+          <svg class="header_hamb_icon" viewBox="0 0 100 100">
+            <path class="header_hamb_line header_hamb_line--top" d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"></path>
+            <path class="header_hamb_line header_hamb_line--middle" d="m 30,50 h 40"></path>
+            <path class="header_hamb_line header_hamb_line--bottom" d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"></path>
+          </svg>
+        </button>
         <div class="header_logo"><img src="./assets/img/logo.svg" alt="EduShare"></div>
-        <ul class="menu" data-magellan="" data-animation-easing="swing" data-threshold="0">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT</a></li>
-          <li><a href="#platform">PLATFORM</a></li>
-          <li><a href="#token">TOKEN</a></li>
-          <li><a href="#roadmap">ROADMAP</a></li>
+        <ul class="menu menu--header" data-magellan="" data-animation-easing="swing" data-threshold="0">
+          <li><a href="#home" data-close="">HOME</a></li>
+          <li><a href="#about" data-close="">ABOUT</a></li>
+          <li><a href="#platform" data-close="">PLATFORM</a></li>
+          <li><a href="#token" data-close="">TOKEN</a></li>
+          <li><a href="#roadmap" data-close="">ROADMAP</a></li>
         </ul>
         <ul class="social">
           <li><a href="#" target="_blank">
@@ -168,15 +175,17 @@
         <div class="grid-container">
           <h2 class="text-center">Token Allocation</h2>
           <div class="token_content">
-            <svg class="token_donut" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 400 400">
-              <path stroke="#F74848" stroke-width="80" d="M200 40a159.999 159.999 0 01113.137 273.137"></path>
-              <path stroke="#3FCCDF" stroke-width="80" d="M307.253 318.73a160.004 160.004 0 01-182.332 22.561"></path>
-              <path stroke="#51CF66" stroke-width="80" d="M118.818 337.875a159.931 159.931 0 01-16.609-11.238"></path>
-              <path stroke="#FCC419" stroke-width="80" d="M97.65 322.982a159.998 159.998 0 01-51.505-79.066"></path>
-              <path stroke="#5C7CFA" stroke-width="80" d="M44.464 237.529a159.997 159.997 0 015.9-94.177"></path>
-              <path stroke="#FF922B" stroke-width="80" d="M52.864 137.143a160 160 0 0161.011-71.986"></path>
-              <path stroke="#F06595" stroke-width="80" d="M118.97 62.036a160 160 0 0173.989-21.881"></path>
-            </svg>
+            <div class="token_donut">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 400 400">
+                <path stroke="#F74848" stroke-width="80" d="M200 40a159.999 159.999 0 01113.137 273.137"></path>
+                <path stroke="#3FCCDF" stroke-width="80" d="M307.253 318.73a160.004 160.004 0 01-182.332 22.561"></path>
+                <path stroke="#51CF66" stroke-width="80" d="M118.818 337.875a159.931 159.931 0 01-16.609-11.238"></path>
+                <path stroke="#FCC419" stroke-width="80" d="M97.65 322.982a159.998 159.998 0 01-51.505-79.066"></path>
+                <path stroke="#5C7CFA" stroke-width="80" d="M44.464 237.529a159.997 159.997 0 015.9-94.177"></path>
+                <path stroke="#FF922B" stroke-width="80" d="M52.864 137.143a160 160 0 0161.011-71.986"></path>
+                <path stroke="#F06595" stroke-width="80" d="M118.97 62.036a160 160 0 0173.989-21.881"></path>
+              </svg>
+            </div>
             <ul class="token_legend">
               <li class="token_legend_item token_legend_item--red">Service <small>(40%)</small>
               </li>
@@ -243,7 +252,7 @@
         <div class="grid-container roadmap_container">
           <div class="roadmap_image"><img srcset="./assets/img/roadmap.png 1x, ./assets/img/roadmap@2x.png 2x" src="./assets/img/roadmap.png" alt="Online Courses"></div>
           <div class="roadmap_content">
-            <h2>Roadmap</h2>
+            <h2 class="roadmap_header">Roadmap</h2>
             <ul class="roadmap_items">
               <li class="roadmap_item">
                 <h3 class="roadmap_item_header">2019 Q3:
@@ -276,13 +285,17 @@
       <footer class="footer">
         <div class="grid-container">
           <div class="footer_top">
-            <div class="footer_logo"><img src="./assets/img/logo.svg" alt="EduShare"></div>
-            <ul class="menu" data-magellan="" data-animation-easing="swing" data-threshold="0">
-              <li><a href="#home">HOME</a></li>
-              <li><a href="#about">ABOUT</a></li>
-              <li><a href="#platform">PLATFORM</a></li>
-              <li><a href="#token">TOKEN</a></li>
-              <li><a href="#roadmap">ROADMAP</a></li>
+            <div class="footer_logo">
+              <picture>
+                <source srcset="./assets/img/logo.svg" media="(min-width: 640px)"><img src="./assets/img/logo_footer.svg" alt="EduShare">
+              </picture>
+            </div>
+            <ul class="menu menu--footer" data-magellan="" data-animation-easing="swing" data-threshold="0">
+              <li><a href="#home" data-close="">HOME</a></li>
+              <li><a href="#about" data-close="">ABOUT</a></li>
+              <li><a href="#platform" data-close="">PLATFORM</a></li>
+              <li><a href="#token" data-close="">TOKEN</a></li>
+              <li><a href="#roadmap" data-close="">ROADMAP</a></li>
             </ul><a class="button secondary" href="#" download>Download Whitepaper</a>
           </div>
           <div class="footer_bottom">
@@ -305,6 +318,15 @@
         </div>
       </footer>
     </main>
-    <script src="./js/app.min.js?ckcachebust=c82c4eed246407daeb9209144b8a730c"></script>
+    <div class="off-canvas position-top header_mobile" id="menu" data-off-canvas data-transition="overlap" data-content-scroll="false" data-auto-focus="false">
+      <ul class="menu menu--mobile" data-magellan="" data-animation-easing="swing" data-threshold="0">
+        <li><a href="#home" data-close="">HOME</a></li>
+        <li><a href="#about" data-close="">ABOUT</a></li>
+        <li><a href="#platform" data-close="">PLATFORM</a></li>
+        <li><a href="#token" data-close="">TOKEN</a></li>
+        <li><a href="#roadmap" data-close="">ROADMAP</a></li>
+      </ul>
+    </div>
+    <script src="./js/app.min.js?ckcachebust=c92293763e499106d5532d6c756b8b43"></script>
   </body>
 </html>
