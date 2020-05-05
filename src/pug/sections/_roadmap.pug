@@ -1,41 +1,72 @@
 -
-    const roadmap = [
-        {
-            title: '2019 Q3',
-            items: [
-                'Market Research',
-                'Blockchain Development'
-            ]
+    const roadmap = {
+        header: {
+            en: 'Roadmap',
+            kr: '로드맵',
+            ch: ''
         },
-        {
-            title: '2020 Q2',
-            items: [
-                'Exchange Listing',
-                'Application Beta'
-            ]
-        },
-        {
-            title: '2020 Q3',
-            items: [
-                'Mainnet Release',
-                'EpaaS Platform'
-            ]
-        }
-    ]
+        items: [
+            {
+                title: '2019 Q3',
+                items: [
+                    {
+                        en: 'Market Research',
+                        kr: '시장 분석',
+                        ch: ''
+                    },
+                    {
+                        en: 'Blockchain Development',
+                        kr: '블록체인 개발',
+                        ch: ''
+                    },
+                ]
+            },
+            {
+                title: '2020 Q2',
+                items: [
+                    {
+                        en: 'Exchange Listing',
+                        kr: '거래소 상장',
+                        ch: ''
+                    },
+                    {
+                        en: 'Application Beta',
+                        kr: '어플리케이션 베타',
+                        ch: ''
+                    },
+                ]
+            },
+            {
+                title: '2020 Q3',
+                items: [
+                    {
+                        en: 'Mainnet Release',
+                        kr: '메인넷 개발',
+                        ch: ''
+                    },
+                    {
+                        en: 'EpaaS Platform',
+                        kr: 'EPaaS 플랫폼',
+                        ch: ''
+                    },
+                ]
+            }
+        ]
+    }
 
 section#roadmap.roadmap
     .grid-container.roadmap_container
         .roadmap_image
-            img(srcset="./assets/img/roadmap.png 1x, ./assets/img/roadmap@2x.png 2x" src="./assets/img/roadmap.png" alt="Online Courses")
+            img(srcset="/assets/img/roadmap.png 1x, /assets/img/roadmap@2x.png 2x" src="/assets/img/roadmap.png" alt="Online Courses")
         .roadmap_content
             h2.roadmap_header
-                | Roadmap
+                =roadmap.header[lang]
             ul.roadmap_items
-                each item in roadmap
+                each item in roadmap.items
                     li.roadmap_item
                         h3.roadmap_item_header
                             =item.title
                             | :
                         ul.roadmap_item_descr
                             each li in item.items
-                                li=li
+                                li=li[lang]

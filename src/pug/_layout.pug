@@ -7,10 +7,11 @@ block const
 //- Components
 include components/_icons
 include components/_menu
+include components/_lang
 include components/_social
 
 doctype html
-html(lang="en")
+html(lang=lang)
     include components/_head
     body
         main.off-canvas-content.wrap(data-off-canvas-content)
@@ -21,4 +22,4 @@ html(lang="en")
         include components/_offcanvas
         block js
             script(src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js")
-            script(src="./js/app.min.js")
+            script(src="/js/app.min.js")

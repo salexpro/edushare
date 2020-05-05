@@ -1,0 +1,18 @@
+.lang {
+    text-transform: uppercase;
+    .active {
+        font-weight: 800;
+        color: $primary-color;
+    }
+    &--mobile.simple{
+        margin-bottom: 10px;
+        @include breakpoint(767 down) {
+            li + li{
+                margin-left: 10px;
+            }
+        }
+        @include breakpoint(small down){
+            margin: 0;
+        }
+    }
+}

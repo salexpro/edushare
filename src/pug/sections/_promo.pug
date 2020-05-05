@@ -1,12 +1,26 @@
+-
+    const promoData = {
+        lead: {
+            en: 'An innovative integration of blockchain and education industry',
+            kr: '블록체인과 교육산업의 혁신적 결합',
+            ch: ''
+        },
+        button: {
+            en: 'Download Whitepaper',
+            kr: '백서 다운로드',
+            ch: ''
+        }
+    }
+
 section.promo
     .grid-container.promo_container
         .promo_content
             h1
                 | EduShare
             p.lead
-                | An innovative integration of blockchain and education industry
+                =promoData.lead[lang]
             .promo_buttons
-                a.button.secondary(href="#" download)
-                    | Download Whitepaper
+                a.button.secondary(href="https://docsend.com/view/y2tfgjdnww3b6kqj" target="_blank")
+                    =promoData.button[lang]
         .promo_image
-            img(srcset="./assets/img/promo.png 1x, ./assets/img/promo@2x.png 2x" src="./assets/img/promo.png" alt="Online Test")
+            img(srcset="/assets/img/promo.png 1x, /assets/img/promo@2x.png 2x" src="/assets/img/promo.png" alt="Online Test")

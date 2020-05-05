@@ -663,6 +663,16 @@
 		"oF": 0,
 		"oS": 0
 		},
+	"/src/pug/components/_lang.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 1,
+		"oAP": "/docs/_lang.html",
+		"oF": 0,
+		"oS": 0
+		},
 	"/src/pug/components/_menu.pug": {
 		"cB": 1,
 		"cOD": 0,
@@ -703,14 +713,34 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"/src/pug/pages/index.pug": {
+	"/src/pug/pages/ch.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/ch/index.html",
+		"oF": 2,
+		"oS": 0
+		},
+	"/src/pug/pages/en.pug": {
 		"cB": 1,
 		"cOD": 0,
 		"ft": 512,
 		"hM": 0,
 		"oA": 0,
 		"oAP": "/docs/index.html",
-		"oF": 0,
+		"oF": 2,
+		"oS": 0
+		},
+	"/src/pug/pages/kr.pug": {
+		"cB": 1,
+		"cOD": 0,
+		"ft": 512,
+		"hM": 0,
+		"oA": 0,
+		"oAP": "/docs/kr/index.html",
+		"oF": 2,
 		"oS": 0
 		},
 	"/src/pug/sections/_about.pug": {
@@ -844,6 +874,19 @@
 		"ma": 1,
 		"oA": 1,
 		"oAP": "/docs/scss/css/_fonts.css",
+		"oF": 0,
+		"oS": 3,
+		"sct": 1
+		},
+	"/src/scss/components/_lang.scss": {
+		"aP": 1,
+		"bl": 0,
+		"dP": 10,
+		"ec": 1,
+		"ft": 4,
+		"ma": 1,
+		"oA": 1,
+		"oAP": "/docs/scss/css/_lang.css",
 		"oF": 0,
 		"oS": 3,
 		"sct": 1
@@ -1002,7 +1045,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/src/assets/favicon/apple-touch-icon.png",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 610035231.10753405
+	"lastBuiltDate": 610399343.78145194
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,

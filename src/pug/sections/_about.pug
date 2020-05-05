@@ -1,45 +1,76 @@
 -
-    const about = [
-        {
-            title: 'EduShare',
-            descr: 'Content DAPP'
+    const about = {
+        lead: {
+            en: 'EduShare is a blockchain project for the educational industry. While not all industries can implement blockchain, technological improvements can revolutionize the educational industry.',
+            kr: 'EduShare는 교육산업을 위한 블록체인 프로젝트입니다. 모든 산업에 블록체인 기술에 적용되지는 않지만, 블록체인 기술을 기반한 기술적인 혁신은 교육산업을 뒤바꿀 수 있습니다.',
+            ch: ''
         },
-        {
-            title: 'EduFund',
-            descr: 'Student Crowdfunding'
-        },
-        {
-            title: 'EduInsure',
-            descr: 'Student Insurance'
-        },
-        {
-            title: 'EpaaS',
-            descr: 'Blockchain Platform'
-        },
-        {
-            title: 'EduAsk',
-            descr: 'Blockchain Q&A'
-        },
-        {
-            title: 'EduLend',
-            descr: 'Student Lending'
-        },
-    ]
+        items: [
+            {
+                title: 'EduShare',
+                descr: {
+                    en: 'Content DAPP',
+                    kr: '콘텐츠 디앱',
+                    ch: ''
+                }
+            },
+            {
+                title: 'EduFund',
+                descr: {
+                    en: 'Student Crowdfunding',
+                    kr: '학생 전용 크라우드펀딩 플랫폼',
+                    ch: ''
+                }
+            },
+            {
+                title: 'EduInsure',
+                descr: {
+                    en: 'Student Insurance',
+                    kr: '학생 전용 보험',
+                    ch: ''
+                }
+            },
+            {
+                title: 'EpaaS',
+                descr: {
+                    en: 'Blockchain Platform',
+                    kr: '블록체인 플랫폼',
+                    ch: ''
+                }
+            },
+            {
+                title: 'EduAsk',
+                descr: {
+                    en: 'Blockchain Q&A',
+                    kr: '블록체인 기반 Q&a',
+                    ch: ''
+                }
+            },
+            {
+                title: 'EduLend',
+                descr: {
+                    en: 'Student Lending',
+                    kr: '학생 전용 대출',
+                    ch: ''
+                }
+            },
+        ]
+    }
 
 section#about.about
     .grid-container
         h2.text-center
             | EduShare Platform
         p.lead.text-center
-            | EduShare is a blockchain project for the educational industry. While not all industries can implement blockchain, technological improvements can revolutionize the educational industry.
+            =about.lead[lang]
 
         ul.about_platform
-            each item, i in about
+            each item, i in about.items
                 li.about_item(class=`about_item--${i+1}`)
                     h3
                         =item.title
                     p.about_item_descr
-                        =item.descr
+                        =item.descr[lang]
                 if i == 2
                     h3.about_hex
                         | EduShare

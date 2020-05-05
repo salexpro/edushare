@@ -2,23 +2,43 @@ mixin menu()
     -
         const menu = [
             {
-                title: 'HOME',
+                title: {
+                    en: 'HOME',
+                    kr: '홈',
+                    ch: ''
+                },
                 link: '#home'
             },
             {
-                title: 'ABOUT',
+                title: {
+                    en: 'ABOUT',
+                    kr: '소개',
+                    ch: ''
+                },
                 link: '#about'
             },
             {
-                title: 'PLATFORM',
+                title: {
+                    en: 'PLATFORM',
+                    kr: '플랫폼',
+                    ch: ''
+                },
                 link: '#platform'
             },
             {
-                title: 'TOKEN',
+                title: {
+                    en: 'TOKEN',
+                    kr: '토큰',
+                    ch: ''
+                },
                 link: '#token'
             },
             {
-                title: 'ROADMAP',
+                title: {
+                    en: 'ROADMAP',
+                    kr: '로드맵',
+                    ch: ''
+                },
                 link: '#roadmap'
             },
         ]
@@ -26,4 +46,4 @@ mixin menu()
         each item in menu
             li
                 a(href=item.link data-close='')
-                    =item.title
+                    =item.title[lang]

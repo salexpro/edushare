@@ -23,12 +23,20 @@
         }
     }
     &--mobile{
+        margin-left: -20px;
         @include breakpoint(small down){
             flex-direction: column;
             align-items: center;
             text-align: center;
+            margin: 0;
             li + li{
                 margin-top: 19px;
+            }
+        }
+        a{
+            @include breakpoint(767 down){
+                padding-left: 10px;
+                padding-right: 10px;
             }
         }
     }

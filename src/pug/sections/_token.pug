@@ -1,46 +1,143 @@
 -
-    const legend = [
-        {
-            color: 'red',
-            label: 'Service',
-            percent: 40
+    const token = {
+        header: {
+            en: 'Token Allocation',
+            kr: '토큰 분배도',
+            ch: ''
         },
-        {
-            color: 'cyan',
-            label: 'Team',
-            percent: 20
-        },
-        {
-            color: 'green',
-            label: 'Sale',
-            percent: 2
-        },
-        {
-            color: 'yello',
-            label: 'IEO',
-            percent: 10
-        },
-        {
-            color: 'blue',
-            label: 'Partner',
-            percent: 10
-        },
-        {
-            color: 'orange',
-            label: 'Advisor',
-            percent: 10
-        },
-        {
-            color: 'pink',
-            label: 'Bounty',
-            percent: 10
-        },
-    ]
+        items: [
+            {
+                color: 'red',
+                label: {
+                    en: 'Service',
+                    kr: '서비스',
+                    ch: ''
+                },
+                percent: 40
+            },
+            {
+                color: 'cyan',
+                label: {
+                    en: 'Team',
+                    kr: '팀',
+                    ch: ''
+                },
+                percent: 20
+            },
+            {
+                color: 'green',
+                label: {
+                    en: 'Sale',
+                    kr: '세일',
+                    ch: ''
+                },
+                percent: 2
+            },
+            {
+                color: 'yello',
+                label: {
+                    en: 'IEO',
+                    kr: 'IEO',
+                    ch: ''
+                },
+                percent: 10
+            },
+            {
+                color: 'blue',
+                label: {
+                    en: 'Partner',
+                    kr: '파트너',
+                    ch: ''
+                },
+                percent: 10
+            },
+            {
+                color: 'orange',
+                label: {
+                    en: 'Advisor',
+                    kr: '어드바이저',
+                    ch: ''
+                },
+                percent: 10
+            },
+            {
+                color: 'pink',
+                label: {
+                    en: 'Bounty',
+                    kr: '바운티',
+                    ch: ''
+                },
+                percent: 10
+            },
+        ],
+        blockchain: {
+            items: [
+                {
+                    label: {
+                        en: 'Token Symbol',
+                        kr: '토큰 심볼',
+                        ch: ''
+                    },
+                    value: 'EDS'
+                },
+                {
+                    label: {
+                        en: 'Initial Circulation',
+                        kr: '초기 유통량',
+                        ch: ''
+                    },
+                    value: '200,000,000'
+                },
+                {
+                    label: {
+                        en: 'Block Generation',
+                        kr: '블록 생성 주기',
+                        ch: ''
+                    },
+                    value: '3 second'
+                },
+                {
+                    label: {
+                        en: 'Block # (1 yr)',
+                        kr: '연간 생성 블록 개수',
+                        ch: ''
+                    },
+                    value: '10,512,000'
+                },
+                {
+                    label: {
+                        en: 'Consensus Algorithm',
+                        kr: '합의 알고리즘',
+                        ch: ''
+                    },
+                    value: 'DCP'
+                },
+            ],
+            eds: [
+                {
+                    label: 'EDS',
+                    value: {
+                        en: 'Utility',
+                        kr: '유틸리티',
+                        ch: ''
+                    },
+                },
+                {
+                    label: 'EDS Point',
+                    value: {
+                        en: 'Point System',
+                        kr: '포인트 시스템',
+                        ch: ''
+                    },
+                },
+            ]
+        }
+    }
 
 section#token.token
     .grid-container
         h2.text-center
-            | Token Allocation
+            =token.header[lang]
         .token_content
             .wow.token_donut
                 svg(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 400 400')
@@ -52,9 +149,9 @@ section#token.token
                     path(data-color='orange' stroke='#FF922B', stroke-width='80', d='M52.864 137.143a160 160 0 0161.011-71.986')
                     path(data-color='pink' stroke='#F06595', stroke-width='80', d='M118.97 62.036a160 160 0 0173.989-21.881')
             ul.token_legend
-                each item in legend
+                each item in token.items
                     li.token_legend_item(class=`token_legend_item--${item.color}`)
-                        =item.label
+                        =item.label[lang]
                         | 
                         small
                             | (
@@ -70,31 +167,14 @@ section#token.token
                                 h3.token_table_header
                                     | EduShare Blockchain
                     tbody
-                        tr
-                            td Token Symbol
-                            td EDS
-                        tr
-                            td Initial Circulation
-                            td 200,000,000
-                        tr
-                            td Block Generation
-                            td 3 second
-                        tr
-                            td Block # (1 yr)
-                            td 10,512,000
-                        tr
-                            td Consensus Algorithm
-                            td DCP
+                        each item in token.blockchain.items
+                            tr
+                                td=item.label[lang]
+                                td=item.value
                 .token_bottom
-                    .token_bottom_col
-                        h3.token_bottom_header
-                            | EDS
-                        p.token_bottom_descr
-                            | Utility
-                        
-                    .token_bottom_col
-                        h3.token_bottom_header
-                            | EDS Point
-                        p.token_bottom_descr
-                            | Point System
-                
+                    each item in token.blockchain.eds
+                        .token_bottom_col
+                            h3.token_bottom_header
+                                =item.label
+                            p.token_bottom_descr
+                                =item.value[lang]
