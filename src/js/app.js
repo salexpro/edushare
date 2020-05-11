@@ -6,6 +6,4 @@ import './components/_anim'
 
 svg4everybody();
 
-$('.lang a').click(function(){
-    localStorage.setItem('lang', this.innerText.toLowerCase());
-})
+$('.lang a').click(function(){localStorage.setItem('lang', this.innerText.toLowerCase())})
