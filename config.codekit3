@@ -713,13 +713,13 @@
 		"oF": 0,
 		"oS": 0
 		},
-	"/src/pug/pages/ch.pug": {
+	"/src/pug/pages/cn.pug": {
 		"cB": 1,
 		"cOD": 0,
 		"ft": 512,
 		"hM": 0,
 		"oA": 0,
-		"oAP": "/docs/ch/index.html",
+		"oAP": "/docs/cn/index.html",
 		"oF": 2,
 		"oS": 0
 		},
@@ -1045,7 +1045,7 @@
 	"displayValueWasSetByUser": 1,
 	"iconImageName": "/src/assets/favicon/apple-touch-icon.png",
 	"iconImageWasSetByUser": 1,
-	"lastBuiltDate": 610427594.35020804
+	"lastBuiltDate": 611250205.96335697
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
